@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+
+{% block title %}Create{% endblock title %}
+
+{% block content %}
+
+<div class="container">
+
+
+  <div class="wrapper">
+    <a href="{% url 'item-create' %}" class="btn btn-dark mb-1 mt-1 butt">Add Item</a>
+  <div class="row">
+    {% for item in items%}
+    <div class="col-sm">
+      <div class="card mx-md-n5 mb-5 mt-5" style="width: 18rem;">
+        {% if item.image%}
+          <img src={{item.image.url}}>
+        {% endif %}
+        <div class="card-body">
+          <h5 class="card-title text">{{item.name}}</h5>
+          <p class="card-text"></p>
+        </div>
+        <a href="{{item.url}}" class="btn btn-dark mb-1">View</a>
+        <a href="{% url 'item-delete' item.id %}" class="btn btn-dark">Delete Item</a>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  </div>
+</div>
+
+
+
+
+
+{% endblock content %}

@@ -1,0 +1,28 @@
+body {
+background-image: url("item.png");
+}
+
+.wrapper {
+    text-align: center;
+}
+
+.button {
+    position: absolute;
+    top: 50%;
+
+}
+
+.card {
+  background-color: #5bc0de;
+  }
+.butt{
+      position: absolute;
+      top: 10%;
+
+}
+
+.text{
+font-family:"Comic Sans MS", cursive, sans-serif	;
+font-style: oblique;
+font-size: 30px;
+}
